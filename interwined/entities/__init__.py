@@ -1,5 +1,6 @@
 """Entity layer exports."""
 
+from interwined.entities.play import Play
 from interwined.entities.story import (
     Choice,
     ComparisonOperator,
@@ -16,6 +17,7 @@ __all__ = [
     "ComparisonOperator",
     "Constraint",
     "Effect",
+    "Play",
     "Scene",
     "Story",
     "VariableDefinition",

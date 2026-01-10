@@ -61,6 +61,7 @@ class Scene:
 @dataclass
 class Story:
     title: str
+    start_scene: str | None = None
     variables: dict[str, VariableDefinition] = field(default_factory=dict)
     scenes: dict[str, Scene] = field(default_factory=dict)
 
