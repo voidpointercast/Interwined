@@ -23,7 +23,7 @@ class NetworkxVisualizationPort(VisualizationPort):
         return VisualizationResponse(content=gml_content, mimetype="text/gml")
 
     def _build_graph(self, story: Story) -> nx.DiGraph:
-        graph = nx.DiGraph(title=story.title)
+        graph: nx.Digraph = nx.DiGraph(title=story.title)
         for scene in story.scenes.values():
             self._add_scene_node(graph, story, scene)
             for choice in scene.choices:
