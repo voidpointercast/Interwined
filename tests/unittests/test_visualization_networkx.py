@@ -39,10 +39,13 @@ class VisualizationNetworkxTests(unittest.TestCase):
         self.assertEqual(graph.nodes["start"]["name"], "Start")
         self.assertTrue(graph.has_edge("start", "end"))
         self.assertEqual(graph.edges["start", "end"]["text"], "Go")
-        self.assertEqual(
-            json.loads(graph.edges["start", "end"]["constraints"]),
-            [],
+        constraints_value = graph.edges["start", "end"]["constraints"]
+        constraints = (
+            constraints_value
+            if isinstance(constraints_value, list)
+            else json.loads(constraints_value)
         )
+        self.assertEqual(constraints, [])
 
 
 if __name__ == "__main__":
