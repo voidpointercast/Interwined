@@ -17,7 +17,6 @@ __all__ = [
     "ComparisonOperator",
     "Constraint",
     "Effect",
-    "Play",
     "Scene",
     "Story",
     "VariableDefinition",
