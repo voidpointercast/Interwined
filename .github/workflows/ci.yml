@@ -28,5 +28,5 @@ jobs:
 
       - name: Run mypy
         run: |
-          poetry run mypy --install-types interwined
+          poetry run mypy --install-types --non-interactive interwined
           poetry run mypy interwined
