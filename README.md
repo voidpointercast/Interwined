@@ -11,5 +11,5 @@ poetry install
 Run the unit tests:
 
 ```bash
-poetry run python -m unittest discover -s tests/unittests
+poetry run pytest --cov=interwined --cov-report=term-missing
 ```
