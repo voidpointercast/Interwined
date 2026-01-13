@@ -12,6 +12,11 @@ dependencies = [
     "networkx>=3.3",
 ]
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+types-networkx = "^3.3.0.20241205"
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 
